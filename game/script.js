@@ -19,12 +19,24 @@ function makeMove(cell, index) {
     if (checkWinner(currentPlayer)) {
         messageElement.textContent = `Игрок ${currentPlayer} выиграл!`;
         isGameActive = false;
+        async function newGame() {
+            setTimeout(() => {
+                location.reload(true);
+            }, [2000])
+        }
+        newGame();
         return;
     }
 
     if (isBoardFull()) {
         messageElement.textContent = "Ничья!";
         isGameActive = false;
+        async function newGame() {
+            setTimeout(() => {
+                location.reload(true);
+            }, [2000])
+        }
+        newGame();
         return;
     }
 
@@ -59,6 +71,7 @@ function checkWinner(currentSymbol) {
 function isBoardFull() {
     return field.every(cell => cell !== "");
 }
+
 
 // Инициализация сообщения о ходе
 updateMessage();
