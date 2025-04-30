@@ -16,7 +16,7 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
-    background-color: lawngreen;
+    background-color: white;
 }
 
 .board {
@@ -30,7 +30,7 @@ body {
 .cell {
     position: relative;
     cursor: pointer;
-    background-color: lawngreen;
+    background-color: white;
 }
 
 .cell.X:before,
@@ -41,7 +41,7 @@ body {
     left: 50%;
     width: 15vmin;
     height: 2vmin;
-    background: #545454;
+    background: grey;
 }
 
 .cell.X:before {
@@ -62,7 +62,7 @@ body {
     width: 10vmin;
     height: 10vmin;
     border-radius: 50%;
-    border: 2vmin solid #f2ebd3;
+    border: 2vmin solid grey;
 }
 
 .message {
